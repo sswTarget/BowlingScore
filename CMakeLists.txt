@@ -4,7 +4,6 @@ add_executable(BowlingScore bowling_score.cpp)
 
 include(CTest)
 
-# does the application run
 add_test (BowlingScorePerfect BowlingScore 10 10 10 10 10 10 10 10 10 10 10 10)
 set_tests_properties(BowlingScorePerfect PROPERTIES PASS_REGULAR_EXPRESSION "--> 300")
 
