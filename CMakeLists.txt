@@ -13,6 +13,12 @@ set_tests_properties(BowlingScoreNormal1 PROPERTIES PASS_REGULAR_EXPRESSION "-->
 add_test (BowlingScoreNormal2 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 1 4 10 5 5)
 set_tests_properties(BowlingScoreNormal2 PROPERTIES PASS_REGULAR_EXPRESSION "--> 94")
 
+add_test (BowlingScoreNormal3 BowlingScore 4 5 6 4 10 10 9 1 0 7 8 1 2 3 5 3 10 1 0)
+set_tests_properties(BowlingScoreNormal3 PROPERTIES PASS_REGULAR_EXPRESSION "--> 128")
+
+add_test (BowlingScoreNormal4 BowlingScore 2 7 6 4 3 2 3 4 5 3 4 5 6 4 3 4 10 9 1 6)
+set_tests_properties(BowlingScoreNormal4 PROPERTIES PASS_REGULAR_EXPRESSION "--> 107")
+
 add_test (BowlingScoreBadInput1 BowlingScore 10 10 10 10 10 10 10 10 10 10 10 1a)
 set_tests_properties(BowlingScoreBadInput1 PROPERTIES PASS_REGULAR_EXPRESSION "must be valid base 10 integer")
 
