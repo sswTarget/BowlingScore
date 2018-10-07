@@ -34,12 +34,12 @@ set_tests_properties(BowlingScoreBadInput4 PROPERTIES PASS_REGULAR_EXPRESSION "c
 
 add_test (BowlingScoreBadInput5 BowlingScore 1 2 10 5 6 2 3 4 5 1 2 3 4 5 1 2 3 4 5)
 set_tests_properties(BowlingScoreBadInput5 PROPERTIES PASS_REGULAR_EXPRESSION "cannot add up to more than 10 pins")
-# fix these two tests
+
 add_test (BowlingScoreBadInput6 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 10 5 4 3 3 )
 set_tests_properties(BowlingScoreBadInput6 PROPERTIES PASS_REGULAR_EXPRESSION "too many rolls entered")
 
 add_test (BowlingScoreBadInput7 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 10 5 4 3 3 )
 set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too many rolls entered")
 
-add_test (BowlingScoreBadInput7 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 1 4 10 5)
-set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too few rolls entered")
+add_test (BowlingScoreBadInput8 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 1 4 10 5)
+set_tests_properties(BowlingScoreBadInput8 PROPERTIES PASS_REGULAR_EXPRESSION "too few rolls entered")
