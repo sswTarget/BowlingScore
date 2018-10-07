@@ -4,6 +4,7 @@ add_executable(BowlingScore bowling_score.cpp)
 
 include(CTest)
 
+# does the application run
 add_test (BowlingScorePerfect BowlingScore 10 10 10 10 10 10 10 10 10 10 10 10)
 set_tests_properties(BowlingScorePerfect PROPERTIES PASS_REGULAR_EXPRESSION "--> 300")
 
@@ -23,10 +24,10 @@ add_test (BowlingScoreBadInput1 BowlingScore 10 10 10 10 10 10 10 10 10 10 10 1a
 set_tests_properties(BowlingScoreBadInput1 PROPERTIES PASS_REGULAR_EXPRESSION "must be valid base 10 integer")
 
 add_test (BowlingScoreBadInput2 BowlingScore 10 10 10 10 10 10 10 10 10 10 10 )
-set_tests_properties(BowlingScoreBadInput2 PROPERTIES PASS_REGULAR_EXPRESSION "too few throws")
+set_tests_properties(BowlingScoreBadInput2 PROPERTIES PASS_REGULAR_EXPRESSION "too few rolls")
 
 add_test (BowlingScoreBadInput3 BowlingScore 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10)
-set_tests_properties(BowlingScoreBadInput3 PROPERTIES PASS_REGULAR_EXPRESSION "too many throws")
+set_tests_properties(BowlingScoreBadInput3 PROPERTIES PASS_REGULAR_EXPRESSION "too many rolls")
 
 add_test (BowlingScoreBadInput4 BowlingScore 1 2 3 4 5 1 2 3 4 5 1 2 3 9 5 1 2 3 4 5)
 set_tests_properties(BowlingScoreBadInput4 PROPERTIES PASS_REGULAR_EXPRESSION "cannot add up to more than 10 pins")
@@ -35,10 +36,10 @@ add_test (BowlingScoreBadInput5 BowlingScore 1 2 10 5 6 2 3 4 5 1 2 3 4 5 1 2 3 
 set_tests_properties(BowlingScoreBadInput5 PROPERTIES PASS_REGULAR_EXPRESSION "cannot add up to more than 10 pins")
 # fix these two tests
 add_test (BowlingScoreBadInput6 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 10 5 4 3 3 )
-set_tests_properties(BowlingScoreBadInput6 PROPERTIES PASS_REGULAR_EXPRESSION "too many throws entered")
+set_tests_properties(BowlingScoreBadInput6 PROPERTIES PASS_REGULAR_EXPRESSION "too many rolls entered")
 
 add_test (BowlingScoreBadInput7 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 10 5 4 3 3 )
-set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too many throws entered")
+set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too many rolls entered")
 
 add_test (BowlingScoreBadInput7 BowlingScore 1 4 3 2 6 3 10 5 5 1 4 3 2 6 3 1 4 10 5)
-set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too few throws entered")
+set_tests_properties(BowlingScoreBadInput7 PROPERTIES PASS_REGULAR_EXPRESSION "too few rolls entered")
